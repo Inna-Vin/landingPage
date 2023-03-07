@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url(../fonts/Nunito_Sans/NunitoSans-SemiBold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@import "variables";
+
+/* generic */
+
+h1 {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: 0.2px;
+    color: $darkblue;
+}
+
+/* normalize */
+
