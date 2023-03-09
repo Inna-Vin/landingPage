@@ -30,6 +30,15 @@
 
 /* generic */
 
+body {
+    font-family: 'Roboto';
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 h1 {
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -38,7 +47,379 @@ h1 {
     line-height: 68px;
     letter-spacing: 0.2px;
     color: $darkblue;
+    margin: 0;
 }
 
-/* normalize */
+h2 {
+    margin: 0;
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+    color: $darkblue;
+}
 
+h3 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $grey;
+}
+
+h4 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+    color: $darkblue;
+}
+
+@mixin button {
+    padding: 15px 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 8px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.header {
+    margin: 50px auto;
+
+    &_container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #EFEEF3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_menu-item {
+        margin: 0 30px;
+        text-decoration: none;
+        color: $darkblue;
+        font-weight: 500;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    &_button {
+        @include button;
+        color: $darkblue;
+        border: 2px solid $darkblue;
+
+        &:hover {
+            color: white;
+            background-color: $darkblue;
+        }
+    }
+}
+
+.section_main {
+    margin: 0 auto;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 50%;
+    }
+
+    &-left {
+        padding-right: 100px;
+        box-sizing: border-box;
+    }
+
+    &-button {
+        @include button;
+        color: $ligthblue;
+        border: 2px solid $ligthblue;
+        margin: 30px 20px 0 0;
+
+        &:hover {
+            color: white;
+            background-color: $ligthblue;
+        }
+    }
+}
+
+.slider {
+    position: relative;
+    width: 576px;
+    height: 416px;
+    border-radius: 8px;
+
+    &_arrows {
+        position: absolute;
+        width: 600px;
+        top: 45%;
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            width: 55px;
+            height: 55px;
+            background-color: $darkblue;
+            padding: 17px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+}
+
+.section-services{
+    margin-top: 120px;
+}
+
+.services-blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    &_item {
+        border: 1px solid $border;
+        border-radius: 8px;
+        padding: 45px;
+        box-sizing: border-box;
+        flex-basis: calc(33% - 20px);
+
+        &-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 64px;
+            height: 64px;
+            border: 1px solid $border;
+            border-radius: 16px;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        &-link {
+            color: $darkblue;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }   
+}
+
+.section-tips {
+    margin-top: 200px;
+
+    &__text {
+        color: $grey;
+    }
+
+    &__blocks {
+        margin-top: 85px;
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            flex-basis: calc(50% - 25px);
+            height: 480px;
+            display: flex;
+            align-items: flex-end;
+            border-radius: 8px;
+            padding: 64px 50px;
+            box-sizing: border-box;
+
+            &-text {
+                margin: 0;
+                font-family: 'Roboto';
+                font-size: 36px;
+                line-height: 48px;
+                letter-spacing: 0.2px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.n1 {
+    background-image: url('../img/tips-backgrnd1.jpg');
+    background-size: cover;
+}
+
+.n2 {
+    background-image: url('../img/tips-backgrnd2.jpg');
+    background-size: cover;
+}
+
+.section-prices {
+    margin-top: 200px;
+
+    .section-prices__blocks {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            flex-basis: calc(33% - 15px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 3px solid $ligthblue;
+            box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.03);
+            border-radius: 0  0 8px 8px;
+            padding: 50px 37px;
+            box-sizing: border-box;
+
+            &-price {
+                font-weight: 700;
+                font-size: 40px;
+                color: $ligthblue;
+            }
+
+            &-text {
+                font-size: 16px;
+                color: $grey;
+                text-align: center;
+                line-height: 28px;
+            }
+
+            &-button {
+                @include button;
+                border-radius: 50px;
+                margin-top: 50px;
+
+                &:hover {
+                    color: white;
+                    background-color: $darkblue;
+                }
+            }
+
+            &.green {
+                border-top: 3px solid $green;
+
+                .section-prices__blocks-item-price {
+                    color: $green;
+                }
+            }
+
+            &.red {
+                border-top: 3px solid $red;
+
+                .section-prices__blocks-item-price {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+.section-banner {
+    margin: 200px 0;
+
+    &__wrap {
+        background-image: url('../img/bunner-bckgrnd.jpg');
+        background-size: cover;
+        border-radius: 50px;
+        padding: 90px 237px;
+        box-sizing: border-box;
+        text-align: center;
+
+        &-title {
+            font-size: 40px;
+            letter-spacing: 0.2px;
+            color: white;
+        }
+
+        &-text {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        &-button {
+            margin: 48px 20px 0 0;
+            @include button;
+            border: 2px solid #FFFFFF;
+            color:#FFFFFF;
+            border-radius: 50px;
+
+            &:hover {
+                color: $button-bunner;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.footer {
+    height: 573px;
+    background-color: $darkblue;
+    padding: 90px 0 70px 0;
+
+    &__wrap {
+        display: flex;
+
+        &-left {
+            width: 285px;
+
+            &-logo {
+                margin-bottom: 30px;
+            }
+
+            &-text {
+                font-size: 16px;
+                line-height: 28px;
+                color: $footer-color;
+                margin: 0;
+            }
+
+            &__icon {
+                margin-top: 60px;
+                display: flex;
+
+                &-img {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        &-rigth {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+
+            &-item {
+                flex-basis: 200px;
+                padding-right: 20px;
+
+                &-title {
+                    font-size: 17px;
+                    text-transform: uppercase;
+                    color: $footer-color;
+                }
+
+                &-link {
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: $footer-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

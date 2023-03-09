@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Inna-Vin/test.git"
+    "url": "git+https://github.com/Inna-Vin/landingPage.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Inna-Vin/test/issues"
+    "url": "https://github.com/Inna-Vin/landingPage/issues"
   },
-  "homepage": "https://github.com/Inna-Vin/test#readme"
+  "homepage": "https://github.com/Inna-Vin/landingPage#readme"
 }
