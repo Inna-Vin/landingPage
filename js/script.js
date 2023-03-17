@@ -9,7 +9,6 @@ let images = [{
 function initSlider() {
 
     let sliderImg = document.querySelector('.slider')
-    let sliderArrows = document.querySelector('.slider_arrows')
 
     initImades();
     initArrows();
