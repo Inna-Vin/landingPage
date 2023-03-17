@@ -141,12 +141,25 @@ h4 {
   height: 416px;
   border-radius: 8px;
 }
+.slider .image {
+  background-size: cover;
+  background-position: center center;
+  width: 576px;
+  height: 416px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+.slider .image.active {
+  opacity: 1;
+}
 .slider_arrows {
   position: absolute;
   width: 600px;
   top: 45%;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 .slider_arrows-item {
   width: 55px;
@@ -154,11 +167,15 @@ h4 {
   background-color: #16133D;
   padding: 17px;
   cursor: pointer;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   color: white;
+}
+.slider_arrows-item.left {
+  left: -27px;
 }
 
 .section-services {
@@ -332,15 +349,18 @@ h4 {
 }
 
 .footer {
-  height: 573px;
-  background-color: #16133D;
+  background: #16133D;
+  color: #EFEEF3;
   padding: 90px 0 70px 0;
 }
 .footer__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
 }
 .footer__wrap-left {
   width: 285px;
+  padding-right: 194px;
 }
 .footer__wrap-left-logo {
   margin-bottom: 30px;
@@ -348,7 +368,6 @@ h4 {
 .footer__wrap-left-text {
   font-size: 16px;
   line-height: 28px;
-  color: #EFEEF3;
   margin: 0;
 }
 .footer__wrap-left__icon {
@@ -370,16 +389,29 @@ h4 {
 .footer__wrap-rigth-item-title {
   font-size: 17px;
   text-transform: uppercase;
-  color: #EFEEF3;
 }
 .footer__wrap-rigth-item-link {
   font-size: 15px;
   line-height: 18px;
-  color: #EFEEF3;
   text-decoration: none;
+  color: #EFEEF3;
 }
 .footer__wrap-rigth-item-link:hover {
   text-decoration: underline;
+}
+.footer__wrap-rigth-item-mail {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: 25px;
+  color: #EFEEF3;
+}
+.footer__wrap-rigth-item-mail:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer__copyrigth {
+  text-align: center;
+  margin-top: 140px;
 }
 
 /*# sourceMappingURL=style.css.map */

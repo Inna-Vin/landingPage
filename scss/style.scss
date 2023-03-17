@@ -156,12 +156,27 @@ h4 {
     height: 416px;
     border-radius: 8px;
 
+    .image {
+        background-size: cover;
+        background-position: center center;
+        width: 576px;
+        height: 416px;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 500ms ease;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
     &_arrows {
         position: absolute;
         width: 600px;
         top: 45%;
         display: flex;
         justify-content: space-between;
+        z-index: 1;
 
         &-item {
             width: 55px;
@@ -169,11 +184,16 @@ h4 {
             background-color: $darkblue;
             padding: 17px;
             cursor: pointer;
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 5px;
             color: white;
+            
+            &.left {
+                left: -27px;
+            }
         }
     }
 }
@@ -363,15 +383,18 @@ h4 {
 }
 
 .footer {
-    height: 573px;
-    background-color: $darkblue;
+    background: $darkblue;
+    color: $footer-color;
     padding: 90px 0 70px 0;
 
     &__wrap {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
 
         &-left {
             width: 285px;
+            padding-right: 194px;
 
             &-logo {
                 margin-bottom: 30px;
@@ -380,7 +403,6 @@ h4 {
             &-text {
                 font-size: 16px;
                 line-height: 28px;
-                color: $footer-color;
                 margin: 0;
             }
 
@@ -406,20 +428,36 @@ h4 {
                 &-title {
                     font-size: 17px;
                     text-transform: uppercase;
-                    color: $footer-color;
                 }
 
                 &-link {
                     font-size: 15px;
                     line-height: 18px;
-                    color: $footer-color;
                     text-decoration: none;
+                    color: $footer-color;
 
                     &:hover {
                         text-decoration: underline;
                     }
                 }
+
+                &-mail {
+                    text-decoration: none;
+                    font-family: 'Roboto';
+                    font-size: 25px;
+                    color: $footer-color;
+
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
             }
         }
+    }
+
+    &__copyrigth {
+        text-align: center;
+        margin-top: 140px;
     }
 }
